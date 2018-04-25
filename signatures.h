@@ -11,6 +11,7 @@ test ecx,ecx
 
 #define CharacterPointSubSig "\x29\x35\x00\x00\x00\x00\xeb" //29 35 38 85 51 00
 //#define CharacterPointSubIDA "29 35 ? ? ? ? eb"
+//#define CharacterPointSubArray "00 00 02 00 00 00 01 00 00 00 17 00 00 00 18 00 00 00 BD 00 00 00 53 00 00 00 0A 00 00 00 09 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 1B 00 00 00"
 #define CharacterPointSubMask "xx????x"
 
 /*

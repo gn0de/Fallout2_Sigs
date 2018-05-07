@@ -68,3 +68,38 @@ jmp fallout2HR.exe+17699
 /*
 mov [ebx*4+fallout2HR.exe+2681AC],edx
 */
+
+#define DDRAWDirectDrawCreateItemsSig "\x89\x0c\x00\x00\x00\x00\x00\x8d\x76" //89 0C 85 B0 7E 6B 05
+//#define DDRAWDirectDrawCreateItemsIDA "89 0c ? ? ? ? ? 8d 76"
+#define DDRAWDirectDrawCreateItemsMask "xx?????xx"
+
+/*
+Direct X
+
+HRESULT WINAPI DirectDrawCreate(
+  _In_  GUID FAR         *lpGUID,
+  _Out_ LPDIRECTDRAW FAR *lplpDD,
+  _In_  IUnknown FAR     *pUnkOuter
+);
+
+*/
+
+/*
+mov [eax*4+DDRAW.dll+57EB0],ecx
+*/
+
+#define AbleToWalkCrosshairSig "\x89\x50\x00\x31\xc0\xeb\x00\xb8\x00\x00\x00\x00\x83\xc4\x00\x5f\x5e\x59\xc3\x8d\x40" //89 50 20 31 C0
+//#define AbleToWalkCrosshairIDA "89 50 ? 31 c0 eb ? b8 ? ? ? ? 83 c4 ? 5f 5e 59 c3 8d 40"
+#define AbleToWalkCrosshairMask "xx?xxx?x????xx?xxxxxx"
+
+/*
+Address: 0DEA9880
+Value: 100663296 //Able to walk
+Value: 100663297 //Not able to walk
+*/
+
+
+/*
+mov [eax+20],edx
+xor eax,eax
+*/
